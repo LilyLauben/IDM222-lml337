@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Bellefair|IM+Fell+DW+Pica+SC|IM+Fell+Great+Primer');
+
+* { 
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Bellefair', serif;
+    font-size: 1.15rem;
+}
+
+a {
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: bold;
+    font-family: 'IM Fell Great Primer', serif;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 0 1.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin: 0 0 0.75rem;
+    text-align: center;
+}
+
+header div.leatherBorder,
+footer div.leatherBorder {
+    height: 3rem;
+    width: 100%;
+    background: #1e3234 url("../images/leather_border.jpg") repeat-x bottom;
+    background-size: auto 180%;
+    position: absolute;
+    z-index: 10;
+}
+
+header div.headerBackground {
+    background-color: #fcfaef;
+}
+
+header div.logoBanner {
+    background: rgba(16, 46, 63, 0) url("../images/banner.png") no-repeat center top;
+    background-size: contain;
+    width: 60vw;
+    max-width: 30rem;
+    min-width: 16rem;
+    margin: 0 auto 0.5rem;
+    padding: 1rem 3rem 2rem; 
+    position: relative;
+    z-index: 30;
+}
+
+header img.logo {
+    width: 100%;
+    height: auto;
+}
+
+header ul.navMenu {
+    margin: 0 10vw;
+    height: 2rem;
+    border-color: black;
+}
+
+header ul.navMenu li {
+    width: 33%;
+    height: 1.5rem;
+    text-align: center;
+    padding: 0 0.75rem;
+    font-style: italic;
+    float: left;
+}
+
+header ul.navMenu li a {
+    color: #271b16;
+    font-style: normal;
+    display: block;
+    padding: 0.25rem 0;
+    width: 100%;
+    margin: 0 0.25rem;
+    text-decoration: none;
+}
+
+header ul.navMenu li a:hover {
+    background-color: #faf5d9;
+}
+
+@media only screen and (max-width: 30rem) {
+    header ul.navMenu {
+        height: auto;
+        padding: 0 0 1rem;
+    }
+    header ul.navMenu li {
+        float: none;
+        width: auto;
+    }
+}
+
+header div.headerBorder {
+    height: 0.5rem;
+    background-color: #e9da4f;
+    margin: 0 0 3rem;
+}
+
+footer {
+    margin: 3rem 0 0;
+}
+
+footer div.leatherBorder {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+    height: 4.5rem;
+}
+
+footer div.leatherBorder p {
+    color: #e9da4f;
+    font-family: 'IM Fell Great Primer', serif;
+    font-weight: bold;
+    margin: 1rem;
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    text-align: center;
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+
+main img.heroImage {
+    height: auto;
+    max-width: 60rem;
+    width: 80vw;
+    display: block;
+    margin: 0 auto 3rem;
+}
+
+main img.inlineImage {
+    height: auto;
+    max-width: 40rem;
+    width: 80vw;
+    display: block;
+    margin: 0 auto 3rem;
+}
+
+main p {
+    line-height: 1.4rem;
+    margin: 0 0 1.5rem;
+}
+
+main p.tagline {
+    margin: 1.5rem 0;
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: center;
+}
+
+main div.padContent {
+    margin: 0 10vw;
+}
+
+main div.sectionBreak {
+    padding: 3rem 0;
+}
+
+main div.fourGridContainer {
+    clear: both;
+    margin-bottom: 1rem;
+    max-width: 75rem;
+    overflow: auto;
+}
+
+main div.fourGridContent {
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    float: left;
+    width: 25%;
+}
+
+main div.fourGridContent img {
+    width: 100%;
+}
+
+main div.fourGridContent h2 {
+    text-align: center;
+    margin: 0.75rem 0;
+}
+
+main div.fourGridContent p {
+    text-align: center;
+    margin: 0;
+}
+
+main iframe {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 37.5rem;
+}
+
+main div.centered {
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto 3rem;
+}
+
+main div.centered img{
+    display: block;
+    margin: 0 auto 3rem;
+    max-width: 30rem;
+    width: 100%;
+}
+
+main div.socialMediaLogoContainer {
+    clear: both;
+    margin: 0 0 4.5rem;
+    text-align: center;
+}
+
+main div img.socialMediaLogo {
+    display: inline-block;
+    margin: 0 1rem;
+    width: 4.5rem;
+}
+
+main a.playtestButton {
+    background: rgba(255,255,255, 0) url("../images/playtest_button.jpg") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin: 0 auto 3rem;
+    max-width: 30rem;
+    width: 100%;
+    height: 300px;
+}
+
+main a.playtestButton:hover {
+    background: rgba(255,255,255, 0) url("../images/playtest_button_hover.jpg") no-repeat center;
+    background-size: contain;
+}
+
+main a.playtestButton:active {
+    background: rgba(255,255,255, 0) url("../images/playtest_button_click.jpg") no-repeat center;
+    background-size: contain;
+}
+
+@media only screen and (max-width: 60rem) {
+    main div.fourGridContent {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 35rem) {
+    main div.fourGridContent {
+        width: 100%;
+    }
+}
