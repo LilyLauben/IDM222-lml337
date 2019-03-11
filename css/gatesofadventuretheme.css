@@ -104,7 +104,7 @@ header div.navMenuContainer:click {
 }
 
 header ul.navMenu {
-    padding: 1.5rem 2rem 9rem;
+    padding: 1.5rem 1.5rem 9rem 3rem;
 }
 
 
@@ -124,10 +124,12 @@ header ul.navMenu li a {
     width: 100%;
     margin: 0 0.25rem;
     text-decoration: none;
+    transition: background;
 }
 
 header ul.navMenu li a:hover {
-    background-color: #faf5d9;
+    background: url(../images/nav-menu-button-hover.png) no-repeat center;
+    background-size: contain;
 }
 
 @media only screen and (max-width: 30rem) {
