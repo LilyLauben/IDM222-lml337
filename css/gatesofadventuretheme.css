@@ -28,10 +28,17 @@ h1 {
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin: 0 0 0.75rem;
     text-align: center;
 }
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+    text-align: center;
+}
+
 
 .headerContainer {
     position: fixed;
@@ -282,6 +289,22 @@ main img.inlineImage {
     margin: 0 auto 3rem;
 }
 
+main div.inlineImageFlexContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+main img.inlineImageFlex {
+    display: block;
+    height: auto;
+    max-width: 30rem;
+    padding: 1rem;
+    width: 100%;
+}
+
 main p {
     line-height: 1.4rem;
     margin: 0 auto 1.5rem;
@@ -293,6 +316,22 @@ main p.tagline {
     font-size: 1.25rem;
     font-style: italic;
     text-align: center;
+}
+
+main p.caption {
+    display: block;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 60rem;
+    position: relative;
+    bottom: 2.5rem;
+    text-align: center;
+    z-index: -1;
+}
+
+main div.inlineImageFlexContainer p {
+    max-width: 20rem;
 }
 
 main div.padContent {
@@ -329,13 +368,6 @@ main div.fourGridContent h2 {
 main div.fourGridContent p {
     text-align: center;
     margin: 0;
-}
-
-main iframe {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 37.5rem;
 }
 
 main div.centered {
