@@ -140,7 +140,7 @@ header img.logo {
 }
 
 .navMenuUp {
-    top: -18rem;
+    top: -24rem;
     transition: top 1s;
 }
 
@@ -208,7 +208,7 @@ header ul.navMenu li a:hover {
     }
 
     .navMenuUp {
-        top: -13rem;
+        top: -18rem;
     }
     
     .navMenuButton
