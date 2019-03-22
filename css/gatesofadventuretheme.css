@@ -33,10 +33,19 @@ h2 {
     text-align: center;
 }
 
+.headerContainer {
+    position: fixed;
+}
+
+header div.headerSpace {
+    height: 10rem;
+}
+
 header div.leatherBorder,
 footer div.leatherBorder {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 3rem;
-    width: 100%;
+    width: 100vw;
     background: #1e3234 url("../images/leather_border.jpg") repeat-x bottom;
     background-size: auto 180%;
     position: absolute;
@@ -48,10 +57,10 @@ header div.logoBanner {
     background: rgba(16, 46, 63, 0) url("../images/banner.png") no-repeat center top;
     background-size: contain;
     width: 60vw;
-    max-width: 30rem;
-    min-width: 16rem;
+    max-width: 24rem;
+    min-width: 14rem;
     margin: 0 1rem 0.5rem;
-    padding: 1rem 3rem 2rem; 
+    padding: .5rem 1.5rem 2rem; 
     position: relative;
     z-index: 20;
 }
@@ -61,32 +70,72 @@ header img.logo {
     height: auto;
 }
 
-header div.menuOverlay {
+#menuOverlay {
     position:fixed;
     top:0;
     bottom:0;
     left:0;
     right:0;
     background-color:rgb(80, 80, 80);
-    opacity:0.6;
-    z-index:25;
+    border: none;
+    z-index: 25;
 }
 
-header div.navMenuContainer {
+@keyframes menuOverlayHide {
+    0%   {
+        opacity: 0.6;
+        width: 100vw;
+    }
+    90% {
+        opacity: 0;
+        width: 100vw;
+    }
+    100% {
+        opacity: 0;
+        width: 0vw;
+    }
+  }
+
+.menuOverlayHide {
+    animation-name: menuOverlayHide;
+    animation-duration: 1s;
+    opacity: 0;
+    width: 0vw;
+}
+
+.menuOverlayShow {
+    opacity: 0.6;
+    transition: opacity 1s;
+    width: 100vw;
+}
+
+#navMenuContainer {
     background: rgba(16, 46, 63, 0) url("../images/MenuPaper_Desktop.png") no-repeat right bottom;
     background-size: cover;
     width: 25rem;
     height: auto;
     padding: 0 0 10rem 3rem;  /* ? ? bottom left */
-    position: absolute;
-    top: -18rem;
+    position: fixed;
     right: 0;
-    transition: top 1s;
     z-index: 30;
+}
+
+.navMenuUp {
+    top: -18rem;
+    transition: top 1s;
+}
+
+.navMenuDown {
+    top: 0rem;
+    transition: top 1s;
 }
 
 .navMenuButton
 {
+    background: none;
+    border: none;
+    box-sizing: content-box;
+    width: 2.75rem;
     position: absolute;
     padding: 3.5rem 2.75rem;
     bottom: 2rem;
@@ -95,18 +144,17 @@ header div.navMenuContainer {
 }
 
 
-header div.navMenuContainer:hover {
+/* header div.navMenuContainer:hover {
     top: 0rem;
 }
 
 header div.navMenuContainer:click {
     top: 0rem;
-}
+} */
 
 header ul.navMenu {
     padding: 1.5rem 1.5rem 9rem 3rem;
 }
-
 
 header ul.navMenu li {
     width: 100%;
@@ -120,6 +168,7 @@ header ul.navMenu li a {
     color: #271b16;
     font-style: normal;
     display: block;
+    font-size: 1.25rem;
     padding: 0.25rem 0;
     width: 100%;
     margin: 0 0.25rem;
@@ -132,7 +181,39 @@ header ul.navMenu li a:hover {
     background-size: contain;
 }
 
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 56rem) {
+    #navMenuContainer {
+        width: 15rem;
+        padding: 0 2rem 5rem 1rem;  /* ? ? bottom left */
+        right: -2rem;
+    }
+
+    .navMenuUp {
+        top: -13rem;
+    }
+    
+    .navMenuButton
+    {
+        width: 1.75rem;
+        padding: 2.5rem 2.75rem;
+        bottom: 1rem;
+        right: .65rem;
+    }
+
+    .navMenuButton img {
+        width: 1.75rem;
+    }
+
+    header ul.navMenu {
+        padding: .75rem .5rem 6rem 1.5rem;
+    }
+
+    header ul.navMenu li a {
+        font-size: 1rem;
+    }
+}
+
+/* @media only screen and (max-width: 30rem) {
     header ul.navMenu {
         width: 14rem;
         height: 20rem;
@@ -143,13 +224,7 @@ header ul.navMenu li a:hover {
     header ul.navMenu li {
         padding: 0.25rem 0;
     }
-}
-
-header div.headerBorder {
-    height: 0.5rem;
-    background-color: #e9da4f;
-    margin: 0 0 3rem;
-}
+} */
 
 footer {
     margin: 3rem 0 0;

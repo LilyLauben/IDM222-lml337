@@ -7,44 +7,25 @@
     <link rel="stylesheet" href="./css/reset.css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="./css/gatesofadventuretheme.css" media="screen" charset="utf-8">
     <title>Gates of Adventure</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(".menuOverlay").hide();
-    
-            $(".navMenu").hover(function() {
-                $(".menuOverlay").fadeIn();
-            });
-
-            $(".menuOverlay").hover(function() {
-                $(".menuOverlay").fadeOut();
-            });
-
-            $(".navMenu").click(function() {
-                $(".menuOverlay").fadeIn();
-            });
-
-            $(".menuOverlay").click(function() {
-                $(".menuOverlay").fadeOut();
-            });
-        });
-    </script>
 </head>
 <body>
     
     <header>
-        <div class="leatherBorder"></div>
-        <div class="logoBanner"><a href="./index.html"><img class="logo" src="./images/logo.png"></a></div>
-        <div class="menuOverlay"></div>
-        <div class="navMenuContainer">
-            <img class="navMenuButton" src="./images/nav_menu_hamburger.png">
-            <ul class="navMenu">
-                <!-- <li><a href="./pages/adventure.html">Adventure</a></li> -->
-                <li><a href="./pages/how-to-play.html">How to Play</a></li>
-                <li><a href="./pages/playtesting.html">Playtest</a></li>
-                <li><a href="./pages/our-team.html">Our Team</a></li>
-            </ul>
-        </div> 
+        <div class="headerContainer">
+            <div class="leatherBorder"></div>
+            <div class="logoBanner"><a href="./index.html"><img class="logo" src="./images/logo.png"></a></div>
+            <button id="menuOverlay" onclick="navMenuToggle()"></button>
+            <div id="navMenuContainer">
+                <button class="navMenuButton" onclick="navMenuToggle()"><img src="./images/nav_menu_hamburger.png"></button>
+                <ul class="navMenu">
+                    <!-- <li><a href="./pages/adventure.html">Adventure</a></li> -->
+                    <li><a href="./pages/how-to-play.html">How to Play</a></li>
+                    <li><a href="./pages/playtesting.html">Playtest</a></li>
+                    <li><a href="./pages/our-team.html">Our Team</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div class="headerSpace"></div>
     </header>
 
     <main>
@@ -81,6 +62,24 @@
     <footer>
         <div class="leatherBorder"><p class="copyright">&copy; Hive Frog Studio</p></div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('document is ready. I can sleep now');
+            document.getElementById("navMenuContainer").classList.add("navMenuUp");
+            document.getElementById("menuOverlay").classList.add("menuOverlayHide");
+        });
+
+        function navMenuToggle() {
+           var navMenu = document.getElementById("navMenuContainer");
+           navMenu.classList.toggle("navMenuUp");
+           navMenu.classList.toggle("navMenuDown");
+           
+           var navOverlay = document.getElementById("menuOverlay");
+           navOverlay.classList.toggle("menuOverlayShow");
+           navOverlay.classList.toggle("menuOverlayHide");
+        }
+    </script>
 
 </body>
 </html>

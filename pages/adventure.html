@@ -11,19 +11,21 @@
 <body>
     
     <header>
-        <div class="headerBackground">
-            <div class="padContent">
-                <div class="leatherBorder"></div>
-                <div class="logoBanner"><a href="../index.html"><img class="logo" src="../images/Logo.png"></a></div>
+        <div class="headerContainer">
+            <div class="leatherBorder"></div>
+            <div class="logoBanner"><a href="./index.html"><img class="logo" src="./images/logo.png"></a></div>
+            <button id="menuOverlay" onclick="navMenuToggle()"></button>
+            <div id="navMenuContainer">
+                <button class="navMenuButton" onclick="navMenuToggle()"><img src="./images/nav_menu_hamburger.png"></button>
                 <ul class="navMenu">
-                    <!-- <li><a href="./adventure.html">Adventure</a></li> -->
-                    <li><a href="./how-to-play.html">How to Play</a></li>
-                    <li><a href="./playtesting.html">Playtest</a></li>
-                    <li><a href="./our-team.html">Our Team</a></li>
+                    <!-- <li><a href="./pages/adventure.html">Adventure</a></li> -->
+                    <li><a href="./pages/how-to-play.html">How to Play</a></li>
+                    <li><a href="./pages/playtesting.html">Playtest</a></li>
+                    <li><a href="./pages/our-team.html">Our Team</a></li>
                 </ul>
-            </div>
+            </div> 
         </div>
-        <div class="headerBorder"></div>
+        <div class="headerSpace"></div>
     </header>
 
     <main>
